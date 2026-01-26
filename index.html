@@ -8,6 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Loading Screen - Star Collision -->
+    <div id="loading-screen" class="loading-screen">
+        <canvas id="collision-canvas"></canvas>
+        <div class="loading-text">
+            <h2>DINESH</h2>
+            <p>Building Zero to One</p>
+        </div>
+    </div>
+
     <canvas id="bg-canvas"></canvas>
 
     <nav>
@@ -30,14 +39,33 @@
     <section id="hero">
         <div class="hero-content">
             <h2 class="badge">🎓 IIT TIRUPATI | MECHANICAL ENGINEER</h2>
-            <h1>Mechanical Engineer <span class="gradient-text">Building Zero-to-One</span> Startups</h1>
+            <h1>ZERO <span class="gradient-text">TO ONE</span> Startups</h1>
             <p class="hero-subtitle">Combining rigorous engineering fundamentals with startup velocity to solve problems for the next billion.</p>
             <div class="hero-btns">
                 <a href="#philosophy" class="btn primary">My Philosophy</a>
                 <a href="#projects" class="btn secondary">Proof of Work</a>
+                <a href="RESUME.pdf" class="btn secondary" download>Download Resume</a>
             </div>
         </div>
+        <div class="hero-image-container">
+            <div class="hero-image-wrapper">
+                <img src="images/dinesh.png" alt="Dinesh - Mechanical Engineer" class="hero-image">
+            </div>
+        </div>
+
+        <!-- Scroll-down comet (click to scroll to next section) -->
+        <a href="#philosophy" class="scroll-comet" aria-label="Scroll down">
+            <span class="comet" aria-hidden="true"></span>
+        </a>
     </section>
+    <section id="philosophy" class="container philosophy-section">
+
+    <!-- Mobile-only profile image (separate from hero on small screens) -->
+    <div class="mobile-profile fade-in">
+        <div class="hero-image-wrapper">
+            <img src="images/dinesh.png" alt="Dinesh - Mechanical Engineer" class="hero-image">
+        </div>
+    </div>
 
     <section id="philosophy" class="container philosophy-section">
         <div class="philosophy-content">
@@ -276,7 +304,33 @@
         </div>
     </section>
 
-    <section id="interests" class="container interests-section">
+    <section id="certifications" class="container certifications-section">
+        <h2 class="section-title fade-in">🎨 Interests & Passions</h2>
+        <div class="certifications-grid">
+            <div class="cert-card fade-in-left stagger-delay-1">
+                <span class="interest-icon">🤖</span>
+                <h3>AI in Mechanical Engineering</h3>
+                <p>Exploring convergence of AI and mechanical systems for intelligent automation</p>
+            </div>
+            <div class="cert-card fade-in-right stagger-delay-2">
+                <span class="interest-icon">💡</span>
+                <h3>Product Innovation</h3>
+                <p>Building market-ready products that solve real-world problems at scale</p>
+            </div>
+            <div class="cert-card fade-in-left stagger-delay-3">
+                <span class="interest-icon">🚀</span>
+                <h3>Startups</h3>
+                <p>Zero-to-one entrepreneurship and scaling ventures from concept to market</p>
+            </div>
+            <div class="cert-card fade-in-left stagger-delay-3">
+                <span class="interest-icon">🌱</span>
+                <h3>Sustainable Design</h3>
+                <p>Creating circular economy solutions and eco-friendly manufacturing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="interests" class="container interests-section">
         <h2 class="section-title fade-in">🎨 Interests & Passions</h2>
         <div class="interests-grid fade-in scale-in">
             <div class="interest-card">
@@ -300,20 +354,21 @@
                 <p>Creating circular economy solutions and eco-friendly manufacturing</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="contact" class="container contact-section">
         <h2 class="section-title fade-in">Get In <span class="gradient-text">Touch</span></h2>
-        <div class="contact-box fade-in scale-in">
-            <h2>Let's Build Something <span class="gradient-text">Remarkable</span></h2>
-            <p class="contact-subtitle">I'm always looking for collaborators on high-impact startups, co-founder opportunities, and ventures solving problems for the next billion.</p>
-            <!-- <div class="contact-links">
-                <p><strong>What I'm Looking For:</strong></p>
-                <p>🤝 Co-founder for deep-tech startups • 💼 Internships in mechanical R&D • 🎯 Angel investors interested in hardware-software integration</p>
-            </div> -->
-        </div>
+        <div class="contact-wrapper fade-in">
+            <div class="contact-box scale-in">
+                <h2>Let's Build Something <span class="gradient-text">Remarkable</span></h2>
+                <p class="contact-subtitle">I'm always looking for collaborators on high-impact startups, co-founder opportunities, and ventures solving problems for the next billion.</p>
+                <!-- <div class="contact-links">
+                    <p><strong>What I'm Looking For:</strong></p>
+                    <p>🤝 Co-founder for deep-tech startups • 💼 Internships in mechanical R&D • 🎯 Angel investors interested in hardware-software integration</p>
+                </div> -->
+            </div>
 
-        <div class="contact-form-container fade-in">
+            <div class="contact-form-container">
             <div class="email-form-card">
                     <h3>📧 Send Me an Email</h3>
                     <form id="contact-form" class="contact-form">
@@ -358,12 +413,11 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Dineh. Built with 3D WebGL Technology.</p>
+        <p>&copy; 2026 Dinesh. Built with 3D WebGL Technology.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
