@@ -1,3 +1,107 @@
+// --- Mobile Menu Toggle ---
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('nav')) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+    }
+});
+
+// --- Stacked Cards Scroll Effect ---
+function handleStackedCards() {
+    const stackedCards = document.querySelectorAll('.project-card.stacked');
+    
+    stackedCards.forEach((card, index) => {
+        const cardRect = card.getBoundingClientRect();
+        const cardTop = cardRect.top;
+        const cardHeight = cardRect.height;
+        
+        // Check if the next card is starting to cover this card
+        if (stackedCards[index + 1]) {
+            const nextCardRect = stackedCards[index + 1].getBoundingClientRect();
+            const nextCardTop = nextCardRect.top;
+            
+            // If next card is getting close, start compacting this card
+            if (nextCardTop < cardTop + cardHeight - 100) {
+                card.classList.add('covered');
+            } else {
+                card.classList.remove('covered');
+            }
+        }
+    });
+}
+
+// Run on scroll
+window.addEventListener('scroll', handleStackedCards);
+// Run on load
+window.addEventListener('load', handleStackedCards);
+
+// --- Contact Form Submission ---
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        // Create mailto link with form data
+        const subject = encodeURIComponent(`New Message from ${name}`);
+        const body = encodeURIComponent(`From: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+        const mailtoLink = `mailto:dineshpolavarapu66@gmail.com?subject=${subject}&body=${body}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Reset form
+        contactForm.reset();
+        
+        // Show success message
+        alert('Opening your email client... Please send the email to confirm.');
+    });
+}
+
+// --- Scroll Animation Observer ---
+const observerOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Element is entering viewport - add visible class
+            entry.target.classList.add('visible');
+        } else {
+            // Element is leaving viewport - remove visible class
+            entry.target.classList.remove('visible');
+        }
+    });
+}, observerOptions);
+
+// Observe all elements with animation classes
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .scale-in');
+    animatedElements.forEach(el => observer.observe(el));
+});
+
 // --- Scene Setup ---
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);

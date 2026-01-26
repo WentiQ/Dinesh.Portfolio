@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dineh | IITian, Engineer & Entrepreneur</title>
+    <title>Dinesh | IITian, Engineer & Entrepreneur</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -11,10 +11,17 @@
     <canvas id="bg-canvas"></canvas>
 
     <nav>
-        <div class="logo">DINEH<span>.</span></div>
-        <div class="links">
+        <div class="logo">DINESH<span>.</span></div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="links" id="nav-links">
             <a href="#hero">Home</a>
-            <a href="#projects">Startups</a>
+            <a href="#philosophy">Philosophy</a>
+            <a href="#projects">Projects</a>
+            <a href="#academics">Academics</a>
             <a href="#skills">Skills</a>
             <a href="#contact" class="cta">Contact</a>
         </div>
@@ -22,67 +29,336 @@
 
     <section id="hero">
         <div class="hero-content">
-            <h2 class="badge">IIT KHARAGPUR | MECHANICAL</h2>
-            <h1>ZERO TO <span class="gradient-text">ONE</span></h1>
-            <p>Building scalable technology startups through the lens of mechanical precision.</p>
+            <h2 class="badge">🎓 IIT TIRUPATI | MECHANICAL ENGINEER</h2>
+            <h1>Mechanical Engineer <span class="gradient-text">Building Zero-to-One</span> Startups</h1>
+            <p class="hero-subtitle">Combining rigorous engineering fundamentals with startup velocity to solve problems for the next billion.</p>
             <div class="hero-btns">
-                <a href="#projects" class="btn primary">View My Builds</a>
-                <a href="#contact" class="btn secondary">Get In Touch</a>
+                <a href="#philosophy" class="btn primary">My Philosophy</a>
+                <a href="#projects" class="btn secondary">Proof of Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophy" class="container philosophy-section">
+        <div class="philosophy-content">
+            <h2 class="section-title fade-in">The <span class="gradient-text">Zero to One</span> Mindset</h2>
+            <div class="philosophy-grid">
+                <div class="philosophy-card fade-in stagger-delay-1">
+                    <div class="philosophy-icon">🔨</div>
+                    <h3>Engineering First</h3>
+                    <p>Every problem begins with rigorous mechanical thinking—first principles, thermodynamics, and precision. Code is the execution, not the strategy.</p>
+                </div>
+                <div class="philosophy-card fade-in stagger-delay-2">
+                    <div class="philosophy-icon">🚀</div>
+                    <h3>Startup Velocity</h3>
+                    <p>Moving from concept to market-ready prototype in 100 days. Speed paired with rigor. Building ventures that serve the next billion.</p>
+                </div>
+                <div class="philosophy-card fade-in stagger-delay-3">
+                    <div class="philosophy-icon">👥</div>
+                    <h3>Leadership Through Action</h3>
+                    <p>Organized ENDURO 2025 and led cross-functional teams. Proving capability through execution, not credentials.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="projects" class="container">
-        <h2 class="section-title">Venture & Projects</h2>
-        <div class="grid">
-            <div class="project-card">
-                <div class="card-glow"></div>
-                <h3>Lifeline AI</h3>
-                <p>A health-tech platform utilizing predictive modeling for disease detection. Developed with a focus on accessibility.</p>
-                <span class="tags">HTML • CSS • JS • AI</span>
+        <h2 class="section-title fade-in">Proof of Work</h2>
+
+        <!-- Mechanical Projects -->
+        <div class="projects-category">
+            <h3 class="category-title fade-in-left">🏗️ Mechanical Engineering</h3>
+            <p class="category-subtitle fade-in-left">Technical rigor & lab validation</p>
+            <div class="stacked-cards">
+                <div class="project-card stacked scale-in" data-card="1">
+                    <span class="card-number">01</span>
+                    <div class="card-glow"></div>
+                    <span class="project-badge">Mechanical</span>
+                    <h3>Tension Testing & Material Analysis</h3>
+                    <p>Conducted rigorous tensile strength testing on composite materials. Generated load-deflection curves and failure analysis using precision instruments.</p>
+                    <span class="tags">Materials Science • Testing • Data Analysis</span>
+                </div>
+                <div class="project-card stacked scale-in" data-card="2">
+                    <span class="card-number">02</span>
+                    <div class="card-glow"></div>
+                    <span class="project-badge">Mechanical</span>
+                    <h3>Thermodynamic Cycle Simulation</h3>
+                    <p>Modeled and analyzed Otto and Diesel cycles using MATLAB. Optimized efficiency parameters through numerical methods and heat transfer analysis.</p>
+                    <span class="tags">Thermodynamics • MATLAB • Simulation</span>
+                </div>
+                <div class="project-card stacked scale-in" data-card="3">
+                    <span class="card-number">03</span>
+                    <div class="card-glow"></div>
+                    <span class="project-badge">Mechanical</span>
+                    <h3>CAD & FEA Modeling</h3>
+                    <p>Designed mechanical components using AutoCAD and SOLIDWORKS. Validated designs with ANSYS FEA for stress distribution and durability.</p>
+                    <span class="tags">AutoCAD • ANSYS • Design</span>
+                </div>
             </div>
-            <div class="project-card">
-                <div class="card-glow"></div>
-                <h3>100-Day Launchpad</h3>
-                <p>A disciplined sprint to take a hardware/software startup from concept to market-ready prototype.</p>
-                <span class="tags">Entrepreneurship • Leadership</span>
+        </div>
+
+        <!-- Software & AI Projects -->
+        <div class="projects-category">
+            <h3 class="category-title fade-in-left">💻 Software & AI</h3>
+            <p class="category-subtitle fade-in-left">Future-ready development & machine learning</p>
+            <div class="stacked-cards">
+                <div class="project-card stacked scale-in" data-card="4">
+                    <span class="card-number">04</span>
+                    <div class="card-glow"></div>
+                    <span class="project-badge">AI/ML</span>
+                    <h3>LifeLine AI – Healthcare Assistant</h3>
+                    <p>Built an AI system for disease prediction using symptom analysis and image-based diagnosis. Evaluated future health risks based on lifestyle habits. Designed a personal health coach for diet, sleep, and exercise planning. Integrated real-time emergency guidance and doctor recommendations.</p>
+                    <span class="tags">Python • ML • Healthcare • Firebase • Real-time Alerts</span>
+                </div>
+                <div class="project-card stacked scale-in" data-card="5">
+                    <span class="card-number">05</span>
+                    <div class="card-glow"></div>
+                    <span class="project-badge">IoT</span>
+                    <h3>Guardian – Smart Wearable System</h3>
+                    <p><strong>🏆 Winner – Nation Builder Competition</strong><br>Proposed AI-enabled wearable for real-time health monitoring and prediction with offline functionality for rural regions. Automated emergency response: ambulance calls, relative alerts, live location sharing. Companion app for health data storage and medicine delivery.</p>
+                    <span class="tags">IoT • AI • Wearables • Emergency Response • Healthcare</span>
+                </div>
+                <div class="project-card stacked scale-in" data-card="6">
+                    <span class="card-number">06</span>
+                    <div class="card-glow"></div>
+                    <span class="project-badge">Mechanical</span>
+                    <h3>Sustainable Manufacturing from Waste</h3>
+                    <p>Converted waste plastics, tires, and aluminum into usable manufacturing materials. Proposed recycled 3D printer filament and sheet production. Focused on circular economy and sustainable engineering principles for zero-waste production.</p>
+                    <span class="tags">Sustainability • Recycling • Manufacturing • CAD • Circular Economy</span>
+                </div>
             </div>
-            <div class="project-card">
-                <div class="card-glow"></div>
-                <h3>Task-Track Auth</h3>
-                <p>A task management system with hierarchical user roles and productivity-focused interfaces.</p>
-                <span class="tags">Web App • Problem Solving</span>
+        </div>
+
+        <!-- Startup Ventures -->
+        <div class="projects-category">
+            <h3 class="category-title fade-in-left">� Startup Ventures</h3>
+            <p class="category-subtitle fade-in-left">From idea to market-ready prototype</p>
+            <div class="stacked-cards">
+                <div class="project-card stacked scale-in" data-card="7">
+                    <span class="card-number">07</span>
+                    <div class="card-glow"></div>
+                    <span class="project-badge">Startup</span>
+                    <h3>100-Day Launchpad</h3>
+                    <p>A disciplined sprint to take a hardware/software startup from concept to market-ready prototype. Validated problem-market fit with target customers. Building the next unicorn.</p>
+                    <span class="tags">Entrepreneurship • Leadership • Prototyping</span>
+                </div>
+                <div class="project-card stacked scale-in" data-card="8">
+                    <span class="card-number">08</span>
+                    <div class="card-glow"></div>
+                    <span class="project-badge">Startup</span>
+                    <h3>Village-First Product Initiative</h3>
+                    <p>Designing scalable solutions for rural communities with limited infrastructure. Focus on solving local problems that can scale globally. Problem-driven approach to zero-to-one.</p>
+                    <span class="tags">Social Impact • Scalability • Design Thinking</span>
+                </div>
+                <div class="project-card stacked scale-in" data-card="9">
+                    <span class="card-number">09</span>
+                    <div class="card-glow"></div>
+                    <span class="project-badge">Startup</span>
+                    <h3>Hardware-Software Integration</h3>
+                    <p>Leading the convergence of mechanical systems with intelligent software. Building IoT-enabled devices that bridge the digital divide.</p>
+                    <span class="tags">IoT • Hardware • Systems Integration</span>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="skills" class="container">
-        <h2 class="section-title">Technical Arsenal</h2>
+        <h2 class="section-title fade-in">Technical Arsenal</h2>
+        <p class="section-subtitle fade-in">A versatile stack combining mechanical precision with software velocity</p>
         <div class="skills-wrapper">
-            <div class="skill-group">
-                <h4>Mechanical Engineering</h4>
-                <ul>
-                    <li>Thermodynamics & Fluid Mechanics</li>
-                    <li>Materials Science & Tension Testing</li>
-                    <li>Applied Mechanics & Numerical Methods</li>
-                </ul>
+            <div class="skill-group fade-in-left stagger-delay-1">
+                <div class="skill-header">
+                    <span class="skill-icon">🔧</span>
+                    <h4>Engineering & Design</h4>
+                </div>
+                <div class="skill-pills">
+                    <span class="skill-pill" data-level="expert">Thermodynamics</span>
+                    <span class="skill-pill" data-level="expert">Fluid Mechanics</span>
+                    <span class="skill-pill" data-level="advanced">Material Science</span>
+                    <span class="skill-pill" data-level="expert">Applied Mechanics</span>
+                    <span class="skill-pill" data-level="advanced">AutoCAD</span>
+                    <span class="skill-pill" data-level="advanced">Fusion 360</span>
+                    <span class="skill-pill" data-level="advanced">ANSYS SpaceClaim</span>
+                    <span class="skill-pill" data-level="advanced">ANSYS Motion</span>
+                    <span class="skill-pill" data-level="advanced">ANSYS Fluent</span>
+                    <span class="skill-pill" data-level="expert">Numerical Methods</span>
+                </div>
             </div>
-            <div class="skill-group">
-                <h4>Software & Systems</h4>
-                <ul>
-                    <li>Python & Android Development</li>
-                    <li>LaTeX & Web Technologies</li>
-                    <li>Quantum Mechanics Logic</li>
+            <div class="skill-group fade-in-right stagger-delay-2">
+                <div class="skill-header">
+                    <span class="skill-icon">💻</span>
+                    <h4>Programming & CS</h4>
+                </div>
+                <div class="skill-pills">
+                    <span class="skill-pill" data-level="expert">Python</span>
+                    <span class="skill-pill" data-level="advanced">C Programming</span>
+                    <span class="skill-pill" data-level="advanced">JavaScript</span>
+                    <span class="skill-pill" data-level="advanced">Data Structures</span>
+                    <span class="skill-pill" data-level="advanced">Algorithms</span>
+                    <span class="skill-pill" data-level="advanced">Firebase</span>
+                    <span class="skill-pill" data-level="expert">HTML/CSS</span>
+                    <span class="skill-pill" data-level="advanced">Machine Learning</span>
+                    <span class="skill-pill" data-level="intermediate">Android Dev</span>
+                    <span class="skill-pill" data-level="advanced">3D WebGL</span>
+                </div>
+            </div>
+            <div class="skill-group fade-in-left stagger-delay-3">
+                <div class="skill-header">
+                    <span class="skill-icon">🛠️</span>
+                    <h4>Soft Skills & Tools</h4>
+                </div>
+                <div class="skill-pills">
+                    <span class="skill-pill" data-level="expert">Problem Solving</span>
+                    <span class="skill-pill" data-level="expert">Teamwork</span>
+                    <span class="skill-pill" data-level="expert">Leadership</span>
+                    <span class="skill-pill" data-level="advanced">Analytical Thinking</span>
+                    <span class="skill-pill" data-level="advanced">Git & GitHub</span>
+                    <span class="skill-pill" data-level="expert">LaTeX</span>
+                    <span class="skill-pill" data-level="advanced">MATLAB</span>
+                    <span class="skill-pill" data-level="intermediate">Quantum Mechanics</span>
+                    <span class="skill-pill" data-level="advanced">AI Prompt Engineering</span>
+                    <span class="skill-pill" data-level="advanced">Linux</span>
+                </div>
+            </div>
+        </div>
+        <div class="skills-legend fade-in">
+            <span class="legend-item"><span class="legend-dot expert"></span> Expert</span>
+            <span class="legend-item"><span class="legend-dot advanced"></span> Advanced</span>
+            <span class="legend-item"><span class="legend-dot intermediate"></span> Intermediate</span>
+        </div>
+    </section>
+
+    <section id="academics" class="container academics-section">
+        <h2 class="section-title fade-in">Academic & <span class="gradient-text">Leadership</span></h2>
+        <div class="academics-grid">
+            <div class="academics-card fade-in-left">
+                <h3>📚 Education</h3>
+                <p class="institution">B.Tech in Mechanical Engineering</p>
+                <p class="detail">IIT Tirupati | Expected Graduation: 2028</p>
+                <div class="coursework">
+                    <strong>Core Coursework:</strong>
+                    <p>Thermodynamics • Fluid Mechanics • Numerical Methods • Quantum Mechanics • Applied Mechanics • Material Science • Heat Transfer</p>
+                </div>
+            </div>
+            <div class="academics-card fade-in-right">
+                <h3>� Leadership & Initiatives</h3>
+                <ul class="achievements">
+                    <li><strong>ENDURO 2025:</strong> Organized and managed a major technical event, coordinating with IIT Hyderabad & IIT Bombay</li>
+                    <li><strong>IIT Collaborations:</strong> Led cross-functional teams on research and innovation initiatives</li>
+                    <li><strong>Entrepreneurship Champion:</strong> Mentoring peers on startup methodology and zero-to-one thinking</li>
+                    <li><strong>Technical Mentorship:</strong> Guiding junior engineers on mechanical design and FEA workflows</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container">
-        <div class="contact-box">
-            <h2>Ready to Solve Problems?</h2>
-            <p>I am always looking for collaborations on high-impact startups.</p>
-            <a href="mailto:yourname@email.com" class="btn primary">Send an Email</a>
+    <section id="certifications" class="container certifications-section">
+        <h2 class="section-title fade-in">🏆 Certifications</h2>
+        <div class="certifications-grid">
+            <div class="cert-card fade-in-left stagger-delay-1">
+                <div class="cert-icon">📜</div>
+                <h3>Data Structures & Algorithms</h3>
+                <p class="cert-issuer">IIT Kharagpur</p>
+                <p class="cert-detail">Comprehensive study of algorithms, complexity analysis, and data structure implementations</p>
+            </div>
+            <div class="cert-card fade-in-right stagger-delay-2">
+                <div class="cert-icon">🤖</div>
+                <h3>Applied Machine Learning</h3>
+                <p class="cert-issuer">IISc Bangalore</p>
+                <p class="cert-detail">Practical ML techniques, model building, and real-world applications in data science</p>
+            </div>
+            <div class="cert-card fade-in-left stagger-delay-3">
+                <div class="cert-icon">💾</div>
+                <h3>Data Structures & Algorithms</h3>
+                <p class="cert-issuer">StrategicERP</p>
+                <p class="cert-detail">Advanced problem-solving and algorithmic thinking for enterprise applications</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests" class="container interests-section">
+        <h2 class="section-title fade-in">🎨 Interests & Passions</h2>
+        <div class="interests-grid fade-in scale-in">
+            <div class="interest-card">
+                <span class="interest-icon">🤖</span>
+                <h3>AI in Mechanical Engineering</h3>
+                <p>Exploring convergence of AI and mechanical systems for intelligent automation</p>
+            </div>
+            <div class="interest-card">
+                <span class="interest-icon">💡</span>
+                <h3>Product Innovation</h3>
+                <p>Building market-ready products that solve real-world problems at scale</p>
+            </div>
+            <div class="interest-card">
+                <span class="interest-icon">🚀</span>
+                <h3>Startups</h3>
+                <p>Zero-to-one entrepreneurship and scaling ventures from concept to market</p>
+            </div>
+            <div class="interest-card">
+                <span class="interest-icon">🌱</span>
+                <h3>Sustainable Design</h3>
+                <p>Creating circular economy solutions and eco-friendly manufacturing</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container contact-section">
+        <h2 class="section-title fade-in">Get In <span class="gradient-text">Touch</span></h2>
+        <div class="contact-box fade-in scale-in">
+            <h2>Let's Build Something <span class="gradient-text">Remarkable</span></h2>
+            <p class="contact-subtitle">I'm always looking for collaborators on high-impact startups, co-founder opportunities, and ventures solving problems for the next billion.</p>
+            <!-- <div class="contact-links">
+                <p><strong>What I'm Looking For:</strong></p>
+                <p>🤝 Co-founder for deep-tech startups • 💼 Internships in mechanical R&D • 🎯 Angel investors interested in hardware-software integration</p>
+            </div> -->
+        </div>
+
+        <div class="contact-form-container fade-in">
+            <div class="email-form-card">
+                    <h3>📧 Send Me an Email</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                    
+                    <div class="form-divider"></div>
+                    
+                    <div class="social-icons-bottom">
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1rem;">Or connect directly:</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/dinesh-polavarapu-134029306" target="_blank" class="social-icon linkedin" title="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.469v6.766z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/dineshpolavarapu" target="_blank" class="social-icon github" title="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://wa.me/917032983348" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.52 3.48C18.25 1.23 15.08 0 11.82 0 5.49 0 .45 5.04 .45 11.38c0 2.04.53 4.04 1.55 5.81L0 24l6.47-1.69c1.71.93 3.63 1.42 5.61 1.42 6.33 0 11.37-5.04 11.37-11.37 0-3.04-1.19-5.9-3.35-8.05zM11.82 21.47c-1.75 0-3.47-.47-4.99-1.36l-.36-.21-3.71.97.98-3.58-.23-.37C2.96 15.29 2.42 13.64 2.42 11.88 2.42 6.82 6.79 2.45 11.85 2.45c2.68 0 5.2 1.04 7.09 2.93 1.89 1.89 2.93 4.41 2.93 7.09 0 5.05-4.38 9.42-9.42 9.42zm5.13-7.05c-.28-.14-1.65-.81-1.91-.91-.25-.09-.44-.14-.62.14-.18.29-.7.91-.86 1.09-.15.19-.31.21-.59.07-1.67-.85-2.77-1.51-3.88-3.44-.29-.49.29-.45.85-1.5.09-.16.05-.3-.02-.42-.08-.12-.62-1.5-.85-2.05-.22-.54-.45-.47-.62-.48-.16 0-.34-.01-.53-.01-.19 0-.49.07-.75.36-.26.29-.99.97-1.03 2.33-.04 1.36.84 2.68 1.93 3.81.28.28 1.48 2.09 3.59 2.93 1.40.57 2.46.52 3.30.38.84-.14 1.65-.68 1.91-1.35.26-.67.26-1.24.18-1.36-.08-.12-.27-.19-.55-.34z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:dineshpolavarapu66@gmail.com" class="social-icon email" title="Email">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
