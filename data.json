@@ -1,0 +1,384 @@
+{
+  "siteMetadata": {
+    "name": "Polavarapu Dinesh",
+    "displayName": "DINESH",
+    "logo": "DINESH",
+    "title": "Dinesh | IITian, Engineer & Entrepreneur",
+    "tagline": "Building Zero to One",
+    "email": "dineshpolavarapu66@gmail.com",
+    "github": "https://github.com/WentiQ",
+    "linkedin": "https://www.linkedin.com/in/dinesh-polavarapu-134029306",
+    "footerText": "2026 Dinesh. Built with 3D WebGL Technology."
+  },
+
+  "loadingScreen": {
+    "heading": "DINESH",
+    "subtitle": "Building Zero to One"
+  },
+
+  "navigation": [
+    { "label": "Home", "href": "#hero" },
+    { "label": "About", "href": "#about" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Education", "href": "#academics" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+
+  "hero": {
+    "badge": "🎓 IIT TIRUPATI | MECHANICAL ENGINEER",
+    "title": "Building <span class=\"gradient-text\">Zero to One</span>",
+    "subtitle": "Aspiring Entrepreneur combining engineering fundamentals, AI, and startup velocity to solve real-world problems.",
+    "image": "images/DINESH2.png",
+    "buttons": [
+      { "text": "About Me", "href": "#about", "type": "primary" },
+      { "text": "Projects", "href": "#projects", "type": "secondary" },
+      { "text": "Get in Touch", "href": "#contact", "type": "secondary" }
+    ]
+  },
+
+  "about": {
+    "title": "About <span class=\"gradient-text\">Me</span>",
+    "cards": [
+      {
+        "icon": "🎯",
+        "heading": "Who Am I",
+        "content": "I'm <strong>Polavarapu Dinesh</strong>, a highly motivated engineering student at <strong>IIT Tirupati</strong> with a strong inclination towards building technology-driven solutions for real-world problems. I believe in learning by building and continuously improving through hands-on projects, experimentation, and interdisciplinary learning."
+      },
+      {
+        "icon": "💡",
+        "heading": "My Interests",
+        "content": "My interests lie at the intersection of <strong>software development, applied machine learning, robotics, and engineering design</strong>, with a long-term vision of becoming an <strong>entrepreneur who creates impactful products</strong>."
+      },
+      {
+        "icon": "🚀",
+        "heading": "Career Vision",
+        "content": "To become an <strong>entrepreneur</strong> who solves <strong>real-world problems</strong> using <strong>engineering, AI, robotics, and software</strong>, and builds products with meaningful societal impact."
+      }
+    ]
+  },
+
+  "projects": {
+    "title": "My Projects & <span class=\"gradient-text\">Achievements</span>",
+    "items": [
+    {
+      "category": "🤖 AI & Machine Learning",
+      "projects": [
+        {
+          "id": 1,
+          "badge": "ML/Healthcare",
+          "title": "LifeLine AI",
+          "keywords": "Applied Machine Learning, Healthcare AI, Python",
+          "description": "Built an ML-based healthcare analytics system to analyze medical data and provide predictive insights for disease diagnosis and health risk assessment.",
+          "tags": ["Python", "ML", "Healthcare", "Data Analysis"]
+        }
+      ]
+    },
+    {
+      "category": "🔧 Automation & IoT",
+      "projects": [
+        {
+          "id": 2,
+          "badge": "IoT/Safety",
+          "title": "Guardian",
+          "keywords": "Safety Monitoring, Automation, Real-time Alerts",
+          "description": "Designed a system focused on monitoring and alerting through logical automation workflows for proactive safety management.",
+          "tags": ["IoT", "Safety", "Automation", "Monitoring"]
+        },
+        {
+          "id": 3,
+          "badge": "Computer Vision",
+          "title": "Prasadam Plate Counter (Temple Automation)",
+          "keywords": "Automation, Computer Vision, Social Impact",
+          "description": "Developed an automated plate-counting system using computer vision to improve accuracy and reduce manual effort in temple operations.",
+          "tags": ["Computer Vision", "Automation", "Social Impact"]
+        }
+      ]
+    },
+    {
+      "category": "💻 Web & Application Development",
+      "projects": [
+        {
+          "id": 4,
+          "badge": "Web Dev",
+          "title": "Track-U – Attendance Tracker",
+          "keywords": "Web Development, Management System",
+          "description": "Built a web-based attendance tracking platform with structured data handling for efficient management of attendance records.",
+          "tags": ["Web Dev", "Management", "Data Handling"]
+        },
+        {
+          "id": 5,
+          "badge": "Productivity",
+          "title": "Blackhole Pomodoro",
+          "keywords": "Productivity, Pomodoro Timer, Focus Tool",
+          "description": "Developed a customized Pomodoro timer for focused and distraction-free work with deep customization options.",
+          "tags": ["Productivity", "Timer", "Focus"]
+        },
+        {
+          "id": 6,
+          "badge": "Full-Stack",
+          "title": "Productivity Pro",
+          "keywords": "Full-Stack Development, Productivity",
+          "description": "Built an all-in-one productivity platform including task planning, event scheduling, and Pomodoro focus sessions.",
+          "tags": ["Full-Stack", "Tasks", "Events", "Pomodoro"]
+        },
+        {
+          "id": 7,
+          "badge": "Android",
+          "title": "Aurivon (Android App)",
+          "keywords": "Android Development, Project Management",
+          "description": "Built a powerful Android app using Android Studio with advanced features like calendars, projects, and task planning.",
+          "tags": ["Android", "Project Management", "Mobile Dev"]
+        },
+        {
+          "id": 8,
+          "badge": "Backend",
+          "title": "Py Test Platform",
+          "keywords": "Python, Online Judge, Coding Platform",
+          "description": "Created a Python testing platform inspired by the JEE Advanced portal with real-time code execution and test-case evaluation.",
+          "tags": ["Python", "Online Judge", "Backend"]
+        },
+        {
+          "id": 9,
+          "badge": "Knowledge Management",
+          "title": "Notivon",
+          "keywords": "Notes, Knowledge Management",
+          "description": "Built an infinite hierarchical note-taking system for deep structured thinking and knowledge organization.",
+          "tags": ["Notes", "Knowledge Management", "App"]
+        },
+        {
+          "id": 10,
+          "badge": "E-Commerce",
+          "title": "E-Commerce Website",
+          "keywords": "Full-Stack, Payment Gateways",
+          "description": "Developed a full-stack e-commerce website with integrated payment gateways for online selling platforms.",
+          "tags": ["Full-Stack", "Payment", "E-Commerce"]
+        },
+        {
+          "id": 11,
+          "badge": "Tools",
+          "title": "Utility Tools",
+          "keywords": "Developer Tools, Web Utilities",
+          "description": "Created a suite of utility tools including QR Generator, PDF Editor, Infinite Hierarchical Notes, and other productivity tools.",
+          "tags": ["Tools", "QR", "PDF", "Utilities"]
+        }
+      ]
+    },
+    {
+      "category": "🤖 Robotics & Hardware (Ongoing)",
+      "projects": [
+        {
+          "id": 12,
+          "badge": "Robotics",
+          "title": "Quadruped Robot",
+          "description": "Currently learning robotics from My Equation Robo AI. Designing and building a fully functional quadruped robot integrating mechanical design, electronics, and control systems.",
+          "tags": ["Robotics", "Mechanical Design", "Electronics", "Control Systems"]
+        },
+        {
+          "id": 13,
+          "badge": "Robotics",
+          "title": "Robotic Arm",
+          "description": "Planning and designing an advanced robotic arm with integrated mechanical, electronic, and software components for precision manipulation.",
+          "tags": ["Robotics", "Mechanical", "Electronics", "Software"]
+        }
+      ]
+    }
+  ]
+  },
+
+  "skills": {
+    "title": "Technical <span class=\"gradient-text\">Skills</span>",
+    "items": [
+    {
+      "icon": "💻",
+      "heading": "Programming Languages",
+      "skills": [
+        { "name": "Python", "level": "expert" },
+        { "name": "C Programming", "level": "advanced" }
+      ]
+    },
+    {
+      "icon": "🎓",
+      "heading": "Core Computer Science",
+      "skills": [
+        { "name": "Data Structures", "level": "advanced" },
+        { "name": "Algorithms", "level": "advanced" },
+        { "name": "Applied Machine Learning", "level": "advanced" }
+      ]
+    },
+    {
+      "icon": "🌐",
+      "heading": "Web & App Development",
+      "skills": [
+        { "name": "Web Development", "level": "advanced" },
+        { "name": "App Development", "level": "intermediate" },
+        { "name": "React Native", "level": "intermediate" },
+        { "name": "Next.js", "level": "intermediate" }
+      ]
+    },
+    {
+      "icon": "🔧",
+      "heading": "Engineering & Design Tools",
+      "skills": [
+        { "name": "AutoCAD", "level": "advanced" },
+        { "name": "ANSYS SpaceClaim", "level": "advanced" },
+        { "name": "ANSYS Motion", "level": "advanced" },
+        { "name": "Fusion 360", "level": "advanced" }
+      ]
+    },
+    {
+      "icon": "🤖",
+      "heading": "Emerging Skills",
+      "skills": [
+        { "name": "Robotics", "level": "intermediate" },
+        { "name": "Automation Systems", "level": "intermediate" }
+      ]
+    }
+  ]
+  },
+
+  "academics": {
+    "title": "Education & <span class=\"gradient-text\">Academic Background</span>",
+    "items": [
+    {
+      "icon": "🎓",
+      "degree": "Bachelor of Technology",
+      "branch": "Mechanical Engineering",
+      "institution": "Indian Institute of Technology (IIT) Tirupati",
+      "duration": "2024 – 2028",
+      "description": "Entered IIT Tirupati through JEE 2024. Actively pursuing interdisciplinary learning alongside core mechanical engineering."
+    },
+    {
+      "icon": "📚",
+      "degree": "Class 11 & 12",
+      "branch": "State Board",
+      "institution": "Ramabanam Junior College, Gajuwaka",
+      "location": "100 Feet Road, near Municipal Office",
+      "duration": "2022 – 2024",
+      "score": "97.2%",
+      "description": "Combined 11th & 12th Score"
+    },
+    {
+      "icon": "🏫",
+      "degree": "Class 10",
+      "branch": "State Board",
+      "institution": "Sri Rama Krishna English Medium School",
+      "location": "Kurmannapalem, Duvvada Road",
+      "duration": "2021 – 2022",
+      "score": "97.8%",
+      "description": ""
+    }
+  ]
+  },
+
+  "certifications": {
+    "title": "🏆 <span class=\"gradient-text\">Certifications</span> & Training",
+    "items": [
+    {
+      "icon": "📜",
+      "title": "Data Structures & Algorithms",
+      "issuer": "IIT Kharagpur",
+      "description": "Comprehensive study of algorithms, complexity analysis, and data structure implementations"
+    },
+    {
+      "icon": "🤖",
+      "title": "Applied Machine Learning",
+      "issuer": "StrategicERP, Mumbai",
+      "description": "Practical ML techniques, model building, and real-world applications in healthcare data science"
+    }
+  ]
+  },
+
+  "interests": {
+    "title": "🎨 Interests & Passions",
+    "items": [
+    {
+      "icon": "🤖",
+      "title": "AI in Mechanical Engineering",
+      "description": "Exploring convergence of AI and mechanical systems for intelligent automation"
+    },
+    {
+      "icon": "💡",
+      "title": "Product Innovation",
+      "description": "Building market-ready products that solve real-world problems at scale"
+    },
+    {
+      "icon": "🚀",
+      "title": "Startups",
+      "description": "Zero-to-one entrepreneurship and scaling ventures from concept to market"
+    },
+    {
+      "icon": "🌱",
+      "title": "Sustainable Design",
+      "description": "Creating circular economy solutions and eco-friendly manufacturing"
+    }
+  ]
+  },
+
+  "contact": {
+    "title": "Let's <span class=\"gradient-text\">Connect</span>",
+    "lookingFor": [
+      {
+        "icon": "🤝",
+        "text": "<strong>Collaboration opportunities</strong> on high-impact projects"
+      },
+      {
+        "icon": "💡",
+        "text": "<strong>Co-founder partnerships</strong> for innovative ventures"
+      },
+      {
+        "icon": "🎯",
+        "text": "<strong>Internships in research & development</strong>"
+      },
+      {
+        "icon": "💼",
+        "text": "<strong>Mentorship & networking</strong> opportunities"
+      }
+    ],
+    "form": {
+      "heading": "📧 Send Me an Email",
+      "fields": [
+        {
+          "type": "text",
+          "id": "name",
+          "placeholder": "Your Name",
+          "required": true
+        },
+        {
+          "type": "email",
+          "id": "email",
+          "placeholder": "Your Email",
+          "required": true
+        },
+        {
+          "type": "textarea",
+          "id": "message",
+          "placeholder": "Your Message",
+          "rows": 4,
+          "required": true
+        }
+      ]
+    }
+  },
+
+  "socialLinks": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/dinesh-polavarapu-134029306",
+      "class": "linkedin",
+      "icon": "linkedin"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/WentiQ",
+      "class": "github",
+      "icon": "github"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:dineshpolavarapu66@gmail.com",
+      "class": "email",
+      "icon": "email"
+    }
+  ]
+}
