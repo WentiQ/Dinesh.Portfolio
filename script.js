@@ -236,6 +236,8 @@ document.addEventListener('click', (e) => {
 });
 
 // --- Stacked Cards Scroll Effect ---
+let stackedCardsAnimationFrame = null;
+
 function handleStackedCards() {
     const stackedCards = document.querySelectorAll('.project-card.stacked');
     
@@ -259,8 +261,16 @@ function handleStackedCards() {
     });
 }
 
+// Throttle scroll handler with requestAnimationFrame for smooth 60fps updates
+function throttledStackedCards() {
+    if (stackedCardsAnimationFrame !== null) {
+        cancelAnimationFrame(stackedCardsAnimationFrame);
+    }
+    stackedCardsAnimationFrame = requestAnimationFrame(handleStackedCards);
+}
+
 // Run on scroll
-window.addEventListener('scroll', handleStackedCards);
+window.addEventListener('scroll', throttledStackedCards, { passive: true });
 // Run on load
 window.addEventListener('load', handleStackedCards);
 
