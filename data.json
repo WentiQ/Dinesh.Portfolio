@@ -32,7 +32,7 @@
     "image": "images/DINESH2.png",
     "buttons": [
       { "text": "About Me", "href": "#about", "type": "primary" },
-      { "text": "Projects", "href": "#projects", "type": "secondary" },
+      { "text": "Resume/CV", "href": "#", "type": "secondary", "action": "download" },
       { "text": "Get in Touch", "href": "#contact", "type": "secondary" }
     ]
   },

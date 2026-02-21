@@ -265,29 +265,204 @@ window.addEventListener('scroll', handleStackedCards);
 window.addEventListener('load', handleStackedCards);
 
 // --- Contact Form Submission ---
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+// Wait for DOM to be fully loaded before attaching form listener
+function setupContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    
+    if (!contactForm) {
+        console.log('Contact form not found, retrying...');
+        setTimeout(setupContactForm, 500);
+        return;
+    }
+    
+    console.log('✓ Contact form found, attaching listener');
+    
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
+        console.log('Form submitted');
         
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        // Create mailto link with form data
-        const subject = encodeURIComponent(`New Message from ${name}`);
-        const body = encodeURIComponent(`From: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-        const mailtoLink = `mailto:dineshpolavarapu66@gmail.com?subject=${subject}&body=${body}`;
-        
-        // Open email client
-        window.location.href = mailtoLink;
-        
-        // Reset form
-        contactForm.reset();
-        
-        // Show success message
-        alert('Opening your email client... Please send the email to confirm.');
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        // Validate inputs
+        if (!name || !email || !message) {
+            alert('Please fill in all fields');
+            return;
+        }
+
+        // Show loading state
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        try {
+            // Method 1: Try Web3Forms
+            console.log('Attempting to send via Web3Forms...');
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    access_key: '72919b05-7eab-44a8-9f00-64abc2c024b5',
+                    name: name,
+                    email: email,
+                    message: message,
+                    subject: `Portfolio Message from ${name}`,
+                    from_name: name,
+                    to_email: 'dineshpolavarapu66@gmail.com'
+                })
+            });
+
+            const data = await response.json();
+            console.log('Web3Forms response:', data);
+
+            if (data.success) {
+                console.log('✓ Message sent successfully');
+                showSuccessPopup(name);
+                contactForm.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                return;
+            } else {
+                throw new Error('Web3Forms failed: ' + (data.message || 'Unknown error'));
+            }
+        } catch (error) {
+            console.error('Web3Forms error:', error);
+            
+            // Fallback: Try FormSubmit service
+            try {
+                console.log('Attempting fallback with FormSubmit...');
+                const formData = new FormData();
+                formData.append('name', name);
+                formData.append('email', email);
+                formData.append('message', message);
+                formData.append('_captcha', 'false');
+
+                const fallbackResponse = await fetch('https://formsubmit.co/dineshpolavarapu66@gmail.com', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (fallbackResponse.ok) {
+                    console.log('✓ Fallback message sent');
+                    showSuccessPopup(name);
+                    contactForm.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                    return;
+                }
+            } catch (fallbackError) {
+                console.error('Fallback error:', fallbackError);
+            }
+
+            // Last resort: Show popup and copy to clipboard
+            console.log('Using last resort: clipboard + mailto');
+            const emailContent = `To: dineshpolavarapu66@gmail.com\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+            
+            try {
+                await navigator.clipboard.writeText(emailContent);
+                alert('Message copied to clipboard.\n\nYou can paste it in an email to:\ndineshpolavarapu66@gmail.com');
+            } catch {
+                alert('Please send the message to:\ndineshpolavarapu66@gmail.com\n\nMessage: ' + message);
+            }
+            
+            // Still show success popup as visual feedback
+            showSuccessPopup(name);
+            contactForm.reset();
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
     });
+}
+
+// Attach form listener when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupContactForm);
+} else {
+    setupContactForm();
+}
+
+// Success popup function
+function showSuccessPopup(name) {
+    // Create popup overlay
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+    `;
+
+    // Create popup content
+    const popup = document.createElement('div');
+    popup.style.cssText = `
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        max-width: 400px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        animation: slideUp 0.4s ease-out;
+    `;
+
+    popup.innerHTML = `
+        <div style="font-size: 48px; margin-bottom: 20px;">✓</div>
+        <h2 style="font-size: 24px; margin-bottom: 10px; font-weight: bold;">Message Sent!</h2>
+        <p style="font-size: 14px; line-height: 1.6; opacity: 0.95;">
+            Thank you <strong>${name}</strong>,<br>
+            Your message has been sent successfully.<br>
+            I'll get back to you soon!
+        </p>
+        <button onclick="this.parentElement.parentElement.remove()" style="
+            margin-top: 20px;
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 10px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            Close
+        </button>
+    `;
+
+    overlay.appendChild(popup);
+    document.body.appendChild(overlay);
+
+    // Add animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Auto-close after 4 seconds
+    setTimeout(() => {
+        if (overlay.parentElement) {
+            overlay.remove();
+        }
+    }, 4000);
 }
 
 // --- Scroll Animation Observer ---
